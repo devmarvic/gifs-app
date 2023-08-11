@@ -1,0 +1,18 @@
+<div class="loader-box">
+  <!-- image giphy -->
+  <img
+  [src]="url"
+  [alt]="alt"
+  class="object-fit-cover animate__animated animate__fadeIn"
+  (load)="onLoad()"
+  [ngStyle]="{display: hasLoaded ? '' : 'none'}"
+  >
+
+  <!-- loader -->
+  <img
+    *ngIf="!hasLoaded"
+    src="assets/loader.svg"
+    alt="loader"
+    class="loader"
+  >
+</div>

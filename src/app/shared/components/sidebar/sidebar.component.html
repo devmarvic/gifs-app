@@ -1,0 +1,19 @@
+<div class="sidebar" id="sidebar">
+  <div class="logo-app">
+    <span class="material-icons">dataset</span>
+    <p>GifsApp</p>
+  </div>
+
+  <div class="separator"></div>
+
+  <div class="list-group">
+    <button
+      *ngFor="let tag of tags"
+      type="button"
+      class="btn-sidebar"
+      (click)="searchTag(tag)"
+    >
+      {{ tag | titlecase}}
+    </button>
+  </div>
+</div>
